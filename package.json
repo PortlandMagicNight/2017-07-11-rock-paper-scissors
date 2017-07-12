@@ -1,0 +1,22 @@
+{
+  "name": "2017-06-13",
+  "version": "1.0.0",
+  "description": "your mission, should you chose to accept it, is to generate a program that plays a game of rock 0, paper 1, or scissors 2. no random functions allowed! the program should be entirely deterministic. (in other words if your program plays against the same opponent program more than once the sequence of moves should be the same.) your program will receive a list of your opponent's previous moves, your previous moves, and the round number; there will be 1000 rounds per match. The tournament will be round robin format, the program with the greatest number of victories will be declared the rock paper scissors champion.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PortlandMagicNight/2017-06-13.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PortlandMagicNight/2017-06-13/issues"
+  },
+  "homepage": "https://github.com/PortlandMagicNight/2017-06-13#readme",
+  "dependencies": {
+    "mocha": "^3.4.2"
+  }
+}
