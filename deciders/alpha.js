@@ -29,12 +29,14 @@ const getDecider = () => {
 	const winCount = getWinsForLast(10);
 
 	if (winCount < 4) {
-		incDecider();
+                console.log("HERE!!", winCount)
+                incDecider();
 		return deciders[deciderIndex];
 	}
 
 	if (getWinsForLast(5) === 0) {
-		incDecider();
+                console.log("HERE!!!!!")
+                incDecider();
 		return deciders[deciderIndex];
 	}
 
@@ -49,6 +51,7 @@ module.exports = class TheDeciders{
   next(lastWon=null){
   	// Update history
   	// history.push({ lastWon, lastPlay });
+        console.log('lastWon', lastWon)
   	history.push(lastWon);
 
   	// Decide
