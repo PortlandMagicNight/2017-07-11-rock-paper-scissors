@@ -10,7 +10,7 @@ describe('Rock, Paper, Scissors', function() {
   describe('Paper beats Rock', function() {
     it('Test A vs. B', function() {
       this.timeout(5000)
-      const bot1 = new Dwayne()
+      const bot1 = new Alpha()
       const bot2 = new AlwaysRock()
       winCount = runGame(bot1, bot2)
       console.log(bot1.name(), winCount[0], bot2.name(), winCount[1])
@@ -49,8 +49,9 @@ describe('Rock, Paper, Scissors', function() {
     for(let i = 0; i < 1000 ; i++){
 
       //Get next play from both bots
-      const bot1Play = bot1.next(roundWinner ? roundWinner == 0 : null)
-      const bot2Play = bot2.next(roundWinner ? roundWinner == 1 : null)
+      console.log(roundWinner)
+      const bot1Play = bot1.next(roundWinner != null ? roundWinner == 0 : null)
+      const bot2Play = bot2.next(roundWinner != null ? roundWinner == 1 : null)
 
       roundWinner = compareRound(bot1Play, bot2Play)
       winCount[roundWinner] = winCount[roundWinner] + 1
