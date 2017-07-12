@@ -15,27 +15,45 @@ module.exports = class MyLib {
 
   next(prevResult) {
     if (this.roundCounter === 0) {
-      this.ourLastMove = this.paper;
+      this.ourLastMove = this.scissors;
       this.roundCounter++;
-      return this.paper;
+      return this.scissors;
     } else {
       if (this.ourLastMove === this.rock) {
-        this.ourLastMove = this.scissors;
-        this.roundCounter++;
-        return this.scissors;
+        if (this.roundCounter % 3 === 0) {
+          this.ourLastMove = this.scissors;
+          this.roundCounter++;
+          return this.scissors;
+        } else {
+          this.ourLastMove = this.scissors;
+          this.roundCounter++;
+          return this.scissors;
+        }
       } else if (this.ourLastMove === this.paper) {
-        this.ourLastMove = this.rock;
-        this.roundCounter++;
-        return this.rock;
+        if (this.roundCounter % 3 === 0) {
+          this.ourLastMove = this.scissors;
+          this.roundCounter++;
+          return this.scissors;
+        } else {
+          this.ourLastMove = this.rock;
+          this.roundCounter++;
+          return this.rock;
+        }
       } else {
-        this.ourLastMove = this.paper;
-        this.roundCounter++;
-        return this.paper;
+        if (this.roundCounter % 3 === 0) {
+          this.ourLastMove = this.scissors;
+          this.roundCounter++;
+          return this.scissors;
+        } else {
+          this.ourLastMove = this.paper;
+          this.roundCounter++;
+          return this.paper;
+        }
       }
     }
   }
 
-  determinePreviousMove(prevResult) {319628
+  determinePreviousMove(prevResult) {
     if ((this.ourLastMove === this.rock) && (this.prevResult === true) ||
         (this.ourLastMove === this.paper) && (this.prevResult === false) ||
         (this.ourLastMOve === this.scissors) && (this.prevResult === null)) {
