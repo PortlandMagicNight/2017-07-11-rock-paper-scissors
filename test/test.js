@@ -10,7 +10,7 @@ describe('Rock, Paper, Scissors', function() {
   describe('Paper beats Rock', function() {
     it('Test A vs. B', function() {
       this.timeout(5000)
-      const bot1 = new AlwaysRock()
+      const bot1 = new Alpha()
       const bot2 = new Dwayne()
       winCount = runGame(bot1, bot2)
       console.log(bot1.name(), winCount[0], bot2.name(), winCount[1])
